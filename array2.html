@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+            var grades = {'na':20,'nb':30,'nc':40};
+        alert(grades['na']);
+        
+        for(key in grades){
+            document.write("key : " + key + "&nbsp  value : " + grades[key] + "<br/>");
+        }
+        
+        
+        let oop = {
+            'list' : {'first':10, 'second':20,'third':30},
+            'show' : function(){
+                for(key in this.list){
+                    document.write(key + ':'+this.list[key]+"<br/>");
+                }
+            }
+        }
+        oop['show']();
+    </script>
+</body>
+</html>

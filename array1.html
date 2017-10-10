@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let numbers = ['123', '456', '789'];
+        numbers.push('김');
+        numbers = numbers.concat(['f','g']);
+        numbers.unshift('start');
+        numbers.splice(3,0,'654');
+        for(let i = 0; i < numbers.length; i++){
+            document.write(numbers[i] + '<br/>');
+        }
+        document.write("<br/>");
+        numbers.shift();
+        numbers.pop();
+        numbers.sort();
+        for(let i = 0; i < numbers.length; i++){
+            document.write(numbers[i] + '<br/>');
+        }
+        numbers.reverse();
+        alert(numbers);
+    </script>
+</body>
+</html>
