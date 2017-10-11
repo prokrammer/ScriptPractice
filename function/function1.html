@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        for (var i = 0; i < 1; i++) {
+            var name = 'coding everybody';
+        }
+        alert(i + name);
+        // 자바스크립트는 '함수'에 대한 유효범위만을 제공
+        // for문은 함수가 아니므로 i는 전역변수가 된다
+        // cf)자바에서는 i를 for문 바깥에서 쓸 수 없다.
+        /*var i = 5;*/
+
+        function a() {
+            var i = 10;
+            b();
+        }
+
+        function b() {
+            document.write(i);
+        }
+
+        a();
+
+        var vscope = 'global';
+        function fscope(){
+            var vscope = 'local';
+            var lv = 'local variables';
+            alert(lv);
+        }
+        fscope();
+        alert("확인");
+        alert(lv);
+    </script>
+</body>
+
+</html>
