@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Closure3</title>
+</head>
+
+<body>
+    <script>
+        /*       var arr = []
+        for(var i = 0; i < 5; i++){
+            arr[i] = function(){
+                return i;
+            }
+        }
+        for(var index in arr) {
+            console.log(arr[index]());
+        }*/
+        var arr = []
+        for (var i = 0; i < 5; i++) {
+            arr[i] = function(id) {
+                return function() {
+                    return id;
+                }
+            }(i);
+        }
+        for (var index in arr) {
+            console.log(arr[index]());
+        }
+
+        /*var i;*/
+        for (var i = 0; i < 5; i++) {
+            (function(j) {
+                setTimeout(function() {
+                    console.log(j);
+                }, j * 100);
+            })(i);
+        }
+        
+    </script>
+</body>
+
+</html>

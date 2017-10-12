@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Closure</title>
+</head>
+<body>
+    <script>
+        function outter1(){
+                var title = 'coding everybody';
+            function inner1(){
+                alert(title);
+            }
+            inner1();
+        }
+        outter1();
+        
+        function outter2(){
+            var title = 'coding everybody';
+            return function(){
+                alert(title);
+            }
+        }
+        inner2 = outter2();
+        inner2();
+    </script>
+</body>
+</html>
